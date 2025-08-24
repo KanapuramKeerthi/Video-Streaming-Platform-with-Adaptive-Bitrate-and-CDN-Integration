@@ -1,73 +1,114 @@
-# Welcome to your Lovable project
+````markdown
+# 🎥 Video Streaming Platform with Adaptive Bitrate & CDN Integration
 
-## Project info
+🚀 A full-featured video streaming platform built with **Node.js, Express, React, FFmpeg, Nginx, MongoDB, and Docker**, supporting **adaptive bitrate streaming (HLS/DASH)** for seamless playback across varying network conditions.  
 
-**URL**: https://lovable.dev/projects/ce8f132a-3f78-49d1-8e4a-c25c1fc07b94
+This project integrates a **CDN-like architecture** using Nginx reverse proxy & caching servers to deliver videos with **low latency, high availability, and smooth adaptive streaming**.  
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
+- 📤 **Video Upload & Transcoding**  
+  - Automatic transcoding to multiple bitrates using **FFmpeg**  
+  - Supports **HLS (HTTP Live Streaming)** and **MPEG-DASH**  
 
-**Use Lovable**
+- 📺 **Adaptive Streaming Playback**  
+  - Dynamic quality switching based on user’s bandwidth & device  
+  - Smooth experience with minimal buffering  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ce8f132a-3f78-49d1-8e4a-c25c1fc07b94) and start prompting.
+- 🌐 **CDN-like Delivery**  
+  - **Nginx reverse proxy & caching** for high availability  
+  - Reduced latency and distributed video delivery  
 
-Changes made via Lovable will be committed automatically to this repo.
+- ⚙️ **API-Driven Architecture**  
+  - Secure **upload, transcoding, and playback APIs**  
+  - Built with **Node.js + Express + MongoDB**  
 
-**Use your preferred IDE**
+- 🐳 **Dockerized Deployment**  
+  - Scalable containerized setup for development & production  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🏗️ Tech Stack
+**Frontend:** React, HLS.js / DASH.js  
+**Backend:** Node.js, Express, MongoDB  
+**Streaming & Media Processing:** FFmpeg, HLS, DASH  
+**CDN & Proxy:** Nginx  
+**Deployment:** Docker, Docker Compose  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📂 Project Structure
+```bash
+├── client/            # React frontend
+├── server/            # Node.js + Express backend
+│   ├── routes/        # API routes
+│   ├── controllers/   # Business logic
+│   ├── models/        # MongoDB models
+├── transcoder/        # FFmpeg processing scripts
+├── nginx/             # Nginx CDN-like config
+├── docker-compose.yml # Containerized setup
+└── README.md
+````
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## ⚡ Getting Started
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### 🔧 Prerequisites
+
+* [Node.js](https://nodejs.org/)
+* [Docker](https://www.docker.com/)
+* [FFmpeg](https://ffmpeg.org/)
+
+### 🚀 Run Locally (Docker)
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/video-streaming-platform.git
+cd video-streaming-platform
+
+# Start services
+docker-compose up --build
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at:
+👉 **Frontend:** [http://localhost:3000](http://localhost:3000)
+👉 **Backend API:** [http://localhost:5000](http://localhost:5000)
+👉 **Nginx CDN Proxy:** [http://localhost:8080](http://localhost:8080)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🎞️ Workflow Overview
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```mermaid
+flowchart LR
+A[User Uploads Video] --> B[Backend API]
+B --> C[FFmpeg Transcoding]
+C --> D[HLS/DASH Segments]
+D --> E[Nginx CDN Cache]
+E --> F[Client Player (React + HLS.js/DASH.js)]
+```
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 📸 Screenshots
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+<img width="1998" height="1290" alt="image" src="https://github.com/user-attachments/assets/98ed7828-72aa-416c-93e6-99fd3124b051" />
+![Uploading image.png…]()
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/ce8f132a-3f78-49d1-8e4a-c25c1fc07b94) and click on Share -> Publish.
+## 🚀 Future Improvements
 
-## Can I connect a custom domain to my Lovable project?
+* 🔒 User authentication & access control
+* 📊 Analytics dashboard for video views & QoS metrics
+* ☁️ Cloud storage (AWS S3, GCP) integration for scalability
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🤝 Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Contributions are welcome! Please fork the repo and submit a PR.
+
+---

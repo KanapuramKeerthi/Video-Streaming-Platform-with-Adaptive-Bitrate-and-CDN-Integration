@@ -79,23 +79,9 @@ The app will be available at:
 
 ---
 
-## 🎞️ Workflow Overview
-
-```mermaid
-flowchart LR
-A[User Uploads Video] --> B[Backend API]
-B --> C[FFmpeg Transcoding]
-C --> D[HLS/DASH Segments]
-D --> E[Nginx CDN Cache]
-E --> F[Client Player (React + HLS.js/DASH.js)]
-```
-
----
-
 ## 📸 Screenshots
 
 <img width="1998" height="1290" alt="image" src="https://github.com/user-attachments/assets/98ed7828-72aa-416c-93e6-99fd3124b051" />
-![Uploading image.png…]()
 
 ---
 
